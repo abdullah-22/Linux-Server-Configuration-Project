@@ -70,12 +70,12 @@ All the packages were updated using:
 * Created the `/etc/sudoers.d` entry for the `grader` user using `sudo nano /etc/sudoers.d/grader`
 * Added the line `grader ALL=(ALL) NOPASSWD:ALL` to it
 * Set up SSH public key authorization for the user "grader" by following commands in order
-	`mkdir /home/grader/.ssh`
-	`chown grader:grader /home/grader/.ssh`
-	`chmod 700 /home/grader/.ssh`
-	`cp /home/ubuntu/.ssh/authorized_keys /home/grader/.ssh/`
-	`chown grader:grader /home/grader/.ssh/authorized_keys`
-	`chmod 644 /home/grader/.ssh/authorized_keys`
+	* `mkdir /home/grader/.ssh`
+	* `chown grader:grader /home/grader/.ssh`
+	* `chmod 700 /home/grader/.ssh`
+	* `cp /home/ubuntu/.ssh/authorized_keys /home/grader/.ssh/`
+	* `chown grader:grader /home/grader/.ssh/authorized_keys`
+	* `chmod 644 /home/grader/.ssh/authorized_keys`
 * Logged out as `ubuntu` and login back as `grader` using `ssh -i "fullPathtoFile\LinuxServer.pem" grader@18.188.108.29`
 * Generated a separate key-pair for the user `grader` and replaced it with  current version from `/home/grader/.ssh/authorized_keys`
 * Checked if there is any error in using `sudo` for the `grader` user.
