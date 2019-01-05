@@ -12,7 +12,7 @@ This is the last project of ***[Udacity Full Stack Web Developer Nanodegree Prog
 * *Installation and configuration of a database server to serve the web application.*
 * *Deployment of the web application.*
 
-***Application is live [here](http://ec2-52-14-174-173.us-east-2.compute.amazonaws.com/)***
+####***Application is live [here](http://ec2-52-14-174-173.us-east-2.compute.amazonaws.com/){:target="_blank"}***
 
 
 ## Introduction
