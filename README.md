@@ -12,6 +12,9 @@ This is the last project of ***[Udacity Full Stack Web Developer Nanodegree Prog
 * *Installation and configuration of a database server to serve the web application.*
 * *Deployment of the web application.*
 
+***Application is live [here](http://ec2-52-14-174-173.us-east-2.compute.amazonaws.com/)***
+
+
 ## Introduction
 
 This project requires the student to create and set up linux server (e.g. Ubuntu) using the cloud services such as [Google Cloud](https://cloud.google.com/), [Amazon AWS](https://aws.amazon.com/) or [DigitalOcean](https://www.digitalocean.com/). The server should be then configured to host a web application while ensuring security, availability and accessibility of the server and the app.  The server should:
@@ -251,7 +254,7 @@ Ran the following commands in order:
 * `sudo a2ensite sportsbazar.conf`
 * `sudo service apache2 reload`
 
-The item catalog web application is now available at: [ec2-18-188-108-29.us-east-2.compute.amazonaws.com](http://ec2-18-188-108-29.us-east-2.compute.amazonaws.com)
+*Hurrah! Application is now up & running!*
 
 _(stuck at someplace? found any error? or just want to connect? see below :))_
 
