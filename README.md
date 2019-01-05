@@ -37,20 +37,20 @@ I created an Ubuntu 16.94 (Xenial) machine on EC2. These links (this [guide](htt
 #### Server Details
 
 ```
-IPv4 Public IP: 18.188.108.29
+IPv4 Public IP: 52.14.174.173
 
-Public DNS (IPv4): ec2-18-188-108-29.us-east-2.compute.amazonaws.com
+Public DNS (IPv4): ec2-52-14-174-173.us-east-2.compute.amazonaws.com
 
 Accessible SSH Port: 2200
 
-Application's URL: http://ec2-18-188-108-29.us-east-2.compute.amazonaws.com
+Application's URL: http://ec2-52-14-174-173.us-east-2.compute.amazonaws.com
 ```
 
 ##  Linux Server Configuration --- walk-through
 
 ### Connecting to the server remotely via SSH
 
-* I used the Git SSH client and logged in using: ``` ssh -i "FullPathToTheFile\PrivateKey.pem" ubuntu@18.188.108.29 ```
+* I used the Git SSH client and logged in using: ``` ssh -i "FullPathToTheFile\PrivateKey.pem" ubuntu@52.14.174.173 ```
 
 ### Changing the public-private key pair for the default user - `ubuntu`
 
@@ -76,7 +76,7 @@ All the packages were updated using:
 	* `cp /home/ubuntu/.ssh/authorized_keys /home/grader/.ssh/`
 	* `chown grader:grader /home/grader/.ssh/authorized_keys`
 	* `chmod 644 /home/grader/.ssh/authorized_keys`
-* Logged out as `ubuntu` and login back as `grader` using `ssh -i "fullPathtoFile\LinuxServer.pem" grader@18.188.108.29`
+* Logged out as `ubuntu` and login back as `grader` using `ssh -i "fullPathtoFile\LinuxServer.pem" grader@52.14.174.173`
 * Generated a separate key-pair for the user `grader` and replaced it with  current version from `/home/grader/.ssh/authorized_keys`
 * Checked if there is any error in using `sudo` for the `grader` user.
 
