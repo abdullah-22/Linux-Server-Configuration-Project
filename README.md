@@ -12,7 +12,7 @@ This is the last project of ***[Udacity Full Stack Web Developer Nanodegree Prog
 * *Installation and configuration of a database server to serve the web application.*
 * *Deployment of the web application.*
 
-#### *Application is live [here](http://ec2-52-14-174-173.us-east-2.compute.amazonaws.com/)*
+#### *Application is live [here](http://ec2-18-222-209-154.us-east-2.compute.amazonaws.com/)*
 
 
 ## Introduction
@@ -40,20 +40,20 @@ I created an Ubuntu 16.94 (Xenial) machine on EC2. These links (this [guide](htt
 #### Server Details
 
 ```
-IPv4 Public IP: 52.14.174.173
+IPv4 Public IP: 18.222.209.154
 
-Public DNS (IPv4): ec2-52-14-174-173.us-east-2.compute.amazonaws.com
+Public DNS (IPv4): ec2-18-222-209-154.us-east-2.compute.amazonaws.com
 
 Accessible SSH Port: 2200
 
-Application's URL: http://ec2-52-14-174-173.us-east-2.compute.amazonaws.com
+Application's URL: http://ec2-18-222-209-154.us-east-2.compute.amazonaws.com
 ```
 
 ##  Linux Server Configuration --- walk-through
 
 ### Connecting to the server remotely via SSH
 
-* I used the Git SSH client and logged in using: ``` ssh -i "FullPathToTheFile\PrivateKey.pem" ubuntu@52.14.174.173 ```
+* I used the Git SSH client and logged in using: ``` ssh -i "FullPathToTheFile\PrivateKey.pem" ubuntu@18.222.209.154 ```
 
 ### Changing the public-private key pair for the default user - `ubuntu`
 
@@ -79,7 +79,7 @@ All the packages were updated using:
 	* `cp /home/ubuntu/.ssh/authorized_keys /home/grader/.ssh/`
 	* `chown grader:grader /home/grader/.ssh/authorized_keys`
 	* `chmod 644 /home/grader/.ssh/authorized_keys`
-* Logged out as `ubuntu` and login back as `grader` using `ssh -i "fullPathtoFile\LinuxServer.pem" grader@52.14.174.173`
+* Logged out as `ubuntu` and login back as `grader` using `ssh -i "fullPathtoFile\LinuxServer.pem" grader@18.222.209.154`
 * Generated a separate key-pair for the user `grader` and replaced it with  current version from `/home/grader/.ssh/authorized_keys`
 * Checked if there is any error in using `sudo` for the `grader` user.
 
@@ -161,7 +161,7 @@ Installed the *Postgresql* database engine
 Created a new OAuth 2.0 client ID credentials for Google OUATH
 * In Google Developer's consoloe
 	* set the **javascript origin** of the project to the  IPv4 & Default DNS
-	* set the **redirect_uris** to `http://ec2-18-188-108-29.us-east-2.compute.amazonaws.com/gconnect`
+	* set the **redirect_uris** to `http://ec2-18-222-209-154.us-east-2.compute.amazonaws.com/gconnect`
 * downloaded the new credentials
 * updated the credentials in the project in `g_client_secrets.json` & in `/templates/login.html`
 * updated the `g_client_secrets`'s path by appending `/srv/path` to it in the `auth.py` file (where needed)
@@ -218,8 +218,8 @@ Added the following script to it:
 ```
 <VirtualHost *:80>
 
-        ServerName 18.188.108.29
-        ServerAlias ec2-18-188-108-29.us-east-2.compute.amazonaws.com
+        ServerName 18.222.209.154
+        ServerAlias ec2-18-222-209-154.us-east-2.compute.amazonaws.com
 
         ServerAdmin abdullahahmadsalman22@gmail.com
 
